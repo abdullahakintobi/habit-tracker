@@ -1,0 +1,4 @@
+[tool.pytest.ini_options]
+# Make the project root importable so tests can `import habit_tracker`
+pythonpath = ["."]
+testpaths = ["tests"]
