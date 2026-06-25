@@ -1,5 +1,11 @@
 # Habit Tracker (Python Backend)
 
+![Python](https://img.shields.io/badge/Python-3.7%2B-3776AB?logo=python&logoColor=white)
+![click](https://img.shields.io/badge/click-CLI-1E7D72?logo=click&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-sqlite3-003B57?logo=sqlite&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-tested-0A9EDC?logo=pytest&logoColor=white)
+![tests](https://img.shields.io/badge/tests-59%20passing-brightgreen)
+
 A command-line habit-tracking backend built for the IU course **Object Oriented
 and Functional Programming with Python (DLBDSOOFPP01)**.
 
@@ -15,6 +21,20 @@ The project deliberately demonstrates **two paradigms side by side**:
   object (its state and behaviour).
 - **Functional programming** powers the analytics: a set of *pure*,
   side-effect-free functions that compute insights from habit data.
+
+---
+
+## Contents
+
+- [Features](#features)
+- [Project structure](#project-structure)
+- [Requirements](#requirements)
+- [Installation](#installation)
+- [Running the application](#running-the-application)
+- [Predefined habits & sample data](#predefined-habits--sample-data)
+- [Running the tests](#running-the-tests)
+- [Screenshots](#screenshots)
+- [Architecture & design notes](#architecture--design-notes)
 
 ---
 
@@ -53,6 +73,7 @@ habit-tracker/
 │   ├── test_habit.py
 │   ├── test_database.py
 │   ├── test_analytics.py
+│   ├── test_cli.py
 │   └── test_fixtures.py
 ├── main.py                 # entry point  ->  python main.py
 ├── requirements.txt
@@ -75,9 +96,16 @@ habit-tracker/
 
 ## Installation
 
-Clone or download the project, then from the project root:
+**1. Clone the repository and enter the project directory**
 
-**macOS / Linux**
+```bash
+git clone https://github.com/abdullahakintobi/habit-tracker.git
+cd habit-tracker
+```
+
+**2. Create a virtual environment and install the dependencies**
+
+*macOS / Linux:*
 
 ```bash
 python3 -m venv .venv
@@ -85,7 +113,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Windows (PowerShell)**
+*Windows (PowerShell):*
 
 ```powershell
 python -m venv .venv
